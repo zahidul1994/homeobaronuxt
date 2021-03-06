@@ -1,0 +1,1057 @@
+
+@media (max-width: 575px) {
+
+    .sidebar {
+        display: none
+    }
+
+    .brand-page .sidebar {
+        display: none
+    }
+
+    .showroom-page .sidebar {
+        display: none
+    }
+
+    .sh-img {
+        margin-bottom: 50px !important;
+    }
+
+    .maps-shp {
+        margin-top: 20px;
+    }
+
+    #sdl p {
+        font-size: 12px !important;
+    }
+
+    #condit {
+        font-size: 14px !important;
+    }
+
+    #subscribe h3 {
+        font-size: 20px;
+    }
+
+    .showroom-page .brand-contant .details-head p {
+        font-size: 20px !important;
+    }
+
+
+    .brd-show .sidebar {
+        display: none
+    }
+
+    .tgl {
+        text-align: center !important;
+        margin-bottom: 15px;
+    }
+
+    .sp-rec .card {
+        margin-bottom: 15px;
+    }
+
+
+    .photo-page .sidebar {
+        display: none
+    }
+
+    .dte .col-md-8 {
+        width: 65%;
+    }
+
+    .dte .col-md-4 {
+        width: 35%;
+    }
+
+    .lt-upload .card {
+        margin-bottom: 20px;
+    }
+
+    .sd-head {
+        width: 50%;
+    }
+
+    .sd-head .lan-btn {
+        float: right
+    }
+
+    .bikes-best .card {
+        margin-bottom: 20px;
+    }
+
+    .showroom-select select {
+        height: 45px;
+        width: 250px;
+        padding: 0 10px;
+        margin-right: 10px;
+        border: 1px solid #dddddd
+    }
+
+    .comp .card {
+        margin-bottom: 20px;
+    }
+
+
+    .compare-bike th {
+        font-size: 14px !important;
+    }
+
+    .compare-bike td {
+        font-size: 12px !important;
+    }
+
+    .all-parts-pg .card {
+        margin-bottom: 30px;
+    }
+
+
+    .get-btn {
+        height: 35px !important;
+        width: 150px !important;
+    }
+
+    .cmptr-slider2 .card .col-md-6 {
+        width: 50% !important;
+        float: left
+    }
+
+
+    .form-control-mobile {
+        width: 80%;
+    }
+
+    .form-inline-mobile {
+        padding-bottom: 8px;
+    }
+
+    #top-area .navbar {
+        padding-bottom: 20px;
+    }
+
+    .tr-btn.mb-0 {
+        margin-top: 10px;
+    }
+
+
+    .product-header {
+        font-size: 21px;
+    }
+
+    .col-md-4.col-lg-3.align-self-center {
+        display: none
+    }
+
+    .navbar-nav .nav-link {
+        padding-left: 15px;
+        border-right: 0;
+    }
+
+    .tr-btn {
+        float: left !important;
+        padding-top: 0 !important;
+    }
+
+    .col-md-4.mt-3.mb-3 {
+        border-right: 0px !important;
+    }
+
+    .fl-spcs {
+        text-align: left !important;
+        padding-left: 8px !important;
+    }
+
+    .p-3.spk-btn {
+        padding-left: 0 !important
+    }
+
+    .showroom button {
+        font-size: 12px;
+    }
+
+    .showroom {
+        padding: 16px 10px;
+    }
+
+    .col-md-8.align-self-center {
+        text-align: center
+    }
+
+    .add-ps {
+        margin: auto
+    }
+
+    .col-md-6.align-self-center.text-right {
+        text-align: left !important
+    }
+
+    .p-3.mb-0.Read {
+        padding-left: 0 !important
+    }
+
+    .details-head p {
+        font-size: 14px;
+    }
+
+    .Competitor-slider {
+        margin-top: 20px;
+    }
+
+    .form-control.mr-sm-2.ask-form {
+        margin-right: 10px;
+        width: 63%;
+    }
+
+    .form-control.mr-sm-2.ask-form {
+        width: 100%;
+    }
+
+    .offer-btn {
+        text-align: center !important;
+        padding-bottom: 15px;
+    }
+
+    .mb25 {
+        margin-bottom: 25px !important;
+    }
+
+    .showroom-search {
+        text-align: center
+    }
+
+    .showroom-search select {
+        margin-bottom: 15px;
+    }
+
+    .showroom-page .brand-contant .details-head p {
+        font-size: 22px;
+    }
+
+    .other-brand .card {
+        margin-bottom: 20px;
+    }
+
+    .fsc {
+        font-size: 16px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .col-md-4.align-self-center.pt-3.text-right {
+        text-align: center !important;
+    }
+
+    .txc-mbl {
+        text-align: center;
+
+    }
+
+    .srvc img {
+        width: 40% !important;
+    }
+
+    .srvc {
+        text-align: center
+    }
+
+
+
+
+    .brand-content .card {
+        margin-bottom: 20px;
+    }
+
+    #bike-type .card {
+        margin-bottom: 20px;
+    }
+
+    .showroom-bd-search {
+        width: 100% !important;
+    }
+
+    .showroom-bd-search select {
+        margin-bottom: 10px;
+    }
+
+    .showroom-bd-search .showroom-select select {
+        height: 40px;
+        width: 250px;
+        padding: 0 10px;
+        margin-right: 10px;
+        border: 1px solid #dddddd;
+        font-size: 16px;
+    }
+
+    .showroom-bd-search .showroom-select button {
+        height: 40px;
+        width: 130px;
+        border: 1px solid #222;
+        background-color: transparent;
+        color: #222;
+        font-weight: 700;
+        transition: all .3s linear;
+        border-radius: 0 !important;
+        font-size: 16px;
+
+    }
+
+    .bdsh-find {
+        font-size: 20px;
+        font-weight: 700
+    }
+
+    .showroom-location .card {
+        margin-bottom: 15px;
+    }
+
+    .btn.btn-danger {
+        font-size: 11px;
+    }
+
+    .mtr-sho-exp a {
+        text-align: center
+    }
+
+    .mtr-sho-exp .card-img-top {
+        width: 50% !important;
+        margin: auto;
+    }
+
+    .bdr-ttl {
+        font-size: 18px;
+    }
+
+    .deler-name {
+        font-size: 26px;
+    }
+
+    .notes {
+        margin-top: 20px;
+    }
+
+    .rv-tt {
+        font-size: 14px !important;
+    }
+
+    .rev-inputs h3 {
+        font-size: 16px;
+        font-weight: 700;
+
+    }
+
+    .mbse {
+        margin-top: 30px;
+    }
+
+    .mbres {
+        float: right !important
+    }
+
+    .insurance .card {
+        margin-bottom: 40px;
+    }
+
+    .main-compare .card {
+        margin-bottom: 20px;
+    }
+
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px) {
+    .sidebar {
+        display: none
+    }
+
+
+    .brand-page .sidebar {
+        display: none
+    }
+
+
+
+    .showroom-page .sidebar {
+        display: none
+    }
+
+    .brd-show .sidebar {
+        display: none
+    }
+
+    .tgl {
+        text-align: center !important;
+        margin-bottom: 15px;
+    }
+
+    .sp-rec .card {
+        margin-bottom: 15px;
+    }
+
+
+    .photo-page .sidebar {
+        display: none
+    }
+
+    .dte .col-md-8 {
+        width: 65%;
+    }
+
+    .dte .col-md-4 {
+        width: 35%;
+    }
+
+    .lt-upload .card {
+        margin-bottom: 20px;
+    }
+
+    .sd-head {
+        width: 50%;
+    }
+
+    .bikes-best .card {
+        margin-bottom: 20px;
+    }
+
+    .comp .card {
+        margin-bottom: 20px;
+    }
+
+    .cmptr-slider2 .card .col-md-6 {
+        width: 50% !important;
+        float: left
+    }
+
+    .main-compare .card {
+        margin-bottom: 20px;
+    }
+
+    .insurance .card {
+        margin-bottom: 40px;
+    }
+
+
+    .all-parts-pg .card {
+        margin-bottom: 30px;
+    }
+
+    .mbse {
+        margin-top: 30px;
+    }
+
+    .notes {
+        margin-top: 20px !important;
+    }
+
+    .bdsh-find {
+        font-size: 20px;
+        font-weight: 700
+    }
+
+
+    .showroom-bd-search .showroom-select select {
+        height: 40px;
+        width: 250px;
+        padding: 0 10px;
+        margin-right: 10px;
+        border: 1px solid #dddddd;
+        font-size: 16px;
+    }
+
+    .showroom-bd-search .showroom-select button {
+        height: 40px;
+        width: 130px;
+        border: 1px solid #222;
+        background-color: transparent;
+        color: #222;
+        font-weight: 700;
+        transition: all .3s linear;
+        border-radius: 0 !important;
+        font-size: 16px;
+
+    }
+
+
+    .showroom-location .card {
+        margin-bottom: 15px;
+    }
+
+    .mtr-sho-exp a {
+        text-align: center
+    }
+
+    .mtr-sho-exp .card-img-top {
+        width: 50% !important;
+        margin: auto;
+    }
+
+
+    .brand-content .card {
+        margin-bottom: 20px;
+    }
+
+    #bike-type .card {
+        margin-bottom: 20px;
+    }
+
+    .navbar-nav .nav-link {
+        padding-left: 15px;
+        border-right: 0;
+    }
+
+    .srvc img {
+        width: 40% !important;
+    }
+
+    .srvc {
+        text-align: center
+    }
+
+
+    .showroom-select select {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .discount-slt select {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .showroom-select button {
+        width: 100% !important;
+    }
+
+    .other-brand .card {
+        margin-bottom: 20px;
+    }
+
+    .fsc {
+        font-size: 18px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .txc-mbl {
+        text-align: center;
+
+    }
+
+    .col-md-4.align-self-center.pt-3.text-right {
+        text-align: center !important;
+    }
+
+
+    .mb25 {
+        margin-bottom: 25px !important;
+    }
+
+    .offer-btn {
+        text-align: left !important;
+        padding-bottom: 15px;
+    }
+
+    .col-md-8.align-self-center {
+        text-align: center
+    }
+
+
+    .col-md-3.align-self-center {
+        display: none
+    }
+
+    #top-area .navbar {
+        padding-bottom: 20px;
+    }
+
+    .tr-btn.mb-0 {
+        margin: auto
+    }
+
+    .form-inline-mobile {
+        padding-bottom: 15px;
+    }
+
+    .navbar-brand {
+        margin: auto;
+        padding-bottom: 10px;
+    }
+
+    .product-header {
+        font-size: 25px;
+    }
+
+    .col-md-4.col-lg-3.align-self-center {
+        display: none
+    }
+
+
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .prt{
+        font-weight: 400;
+        font-size: 7px;
+    }
+    .prt-btm span{
+        font-size: 10px;
+    }
+    .prt-btm{
+        padding: 0;
+    }
+    
+    
+    #bike-type .see-bike {
+        font-size: 9px !important;
+    }
+
+
+
+    .cty h4 {
+        font-size: 7px !important;
+    }
+
+    .brp-cb p {
+        font-size: 14px !important;
+    }
+
+
+    .dist-btn {
+        font-size: 4px;
+    }
+
+    .loc-name {
+        font-size: 15px;
+    }
+
+    #By-Budget p {
+        font-size: 8px !important;
+    }
+
+    #by-cc p {
+        font-size: 10px !important;
+    }
+
+    #subscribe h3 {
+        font-size: 18px;
+    }
+
+    .subs-btn {
+        width: 30%;
+    }
+
+
+    .product-contant p {
+        font-size: 12px;
+    }
+
+    .toggle-btn {
+        font-size: 9px;
+    }
+
+    .pdf-img {
+        padding: 0px !important;
+    }
+
+    .pdf-name {
+        color: #222;
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+    .pdf {
+        padding: 30px;
+    }
+
+    .single-bar {
+        font-size: 14px;
+    }
+
+    .single-left2 {
+        font-size: 12px;
+    }
+
+    .brnand-name li a {
+        font-size: 13px;
+    }
+
+    .qz-btn {
+        padding: 2px 10px;
+        margin: 15px;
+    }
+
+    .valm {
+        font-size: 12px;
+    }
+
+
+    .dte p {
+        font-size: 8px
+    }
+
+    .lt-upload .bike-n {
+        font-size: 11px !important;
+    }
+
+    .lt-upload .c-bottom {
+        padding: 5px 0 !important;
+        font-size: 14px;
+    }
+
+
+
+    .main-compare .card select {
+        height: 30px !important;
+        font-size: 11px !important;
+    }
+
+
+    .get-btn {
+        height: 30px !important;
+        width: 100% !important;
+        font-size: 9px !important;
+    }
+
+    .card-button-vd button {
+        font-size: 10px;
+         
+    }
+
+    .mb-0.text-center.mt-1 {
+        font-size: 10px;
+    }
+
+    .rv-dtl {
+        font-size: 13px !important;
+    }
+
+    .rev-inputs h3 {
+        font-size: 16px;
+    }
+
+    .form-check-label {
+        font-size: 12px;
+    }
+
+    .btn.rev-btn {
+        font-size: 12px;
+
+    }
+
+    .locationshm-select h3 {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .locationshm-select select {
+        height: 30px;
+    }
+
+    .showroom-location .card {
+        margin-bottom: 15px;
+    }
+
+    .bdsh-find {
+        font-size: 20px;
+        font-weight: 700
+    }
+
+
+    .showroom-bd-search .showroom-select select {
+        height: 40px;
+        width: 250px;
+        padding: 0 10px;
+        margin-right: 10px;
+        border: 1px solid #dddddd;
+        font-size: 16px;
+    }
+
+    .showroom-bd-search .showroom-select button {
+        height: 40px;
+        width: 130px;
+        border: 1px solid #222;
+        background-color: transparent;
+        color: #222;
+        font-weight: 700;
+        transition: all .3s linear;
+        border-radius: 0 !important;
+        font-size: 16px;
+
+    }
+
+
+
+    .md-res .card .card-body {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        padding-bottom: 0 !important;
+        padding-top: 15px !important;
+    }
+
+    .card-text.pb-3.font-weight-bold.text-uppercase {
+        font-size: 14px;
+    }
+
+    .btn.btn-success.text-dark.font-weight-bold {
+        font-size: 12px;
+    }
+
+    .card-text.font-weight-bold.text-uppercase {
+        font-size: 12px !important;
+    }
+
+
+    .By-Budget p {
+        font-size: 14px !important;
+    }
+
+    .by-cc p {
+        font-size: 13px !important;
+    }
+
+
+
+    #top-area .navbar {
+        padding-bottom: 20px;
+    }
+
+    .navbar-brand {
+        padding-bottom: 33px;
+    }
+
+    .mb-0.top-sd-cont {
+        font-size: 14px;
+    }
+
+    .filter-header {
+        font-size: 20px;
+    }
+
+    .by-b-c {
+        font-size: 14px;
+    }
+
+    .add img {
+        width: 85% !important;
+    }
+
+    .add-ps img {
+        width: 58% !important;
+    }
+
+    .offer-btn button {
+        font-size: 12px;
+    }
+
+    .offer-btn {
+        padding-bottom: 15px;
+    }
+
+    .specs h4 {
+        font-size: 17px;
+    }
+
+    .specs .spec-titel {
+        font-size: 12px;
+    }
+
+    .specs .spec-detail {
+        font-size: 12px;
+    }
+
+    .cty h4 {
+        font-size: 16px;
+    }
+
+    .showroom-page .brand-contant .details-head p {
+        font-size: 18px;
+    }
+
+    .mb-0.txc-mbl {
+        font-size: 10px;
+    }
+
+    #nav-home-tab {
+        font-size: 11px;
+    }
+
+    #nav-profile-tab {
+        font-size: 11px;
+    }
+
+    .showroom-select select {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .showroom-select button {
+        width: 100% !important;
+    }
+
+    .mrgn {
+        font-size: 12px;
+    }
+
+    td {
+        font-size: 12px;
+    }
+
+
+
+    .brand-name {
+        font-size: 6px !important;
+    }
+
+    .bdr-ttl {
+        font-size: 13px;
+    }
+
+    .deler-name {
+        font-size: 20px;
+    }
+
+    .rev-src {
+        width: 100% !important;
+        height: 40px;
+    }
+
+    .rev-sec-btn {
+        padding: 4px 35px;
+        font-size: 18px;
+        font-weight: 700;
+        background: transparent;
+        border: 1px solid;
+        color: #222222;
+        margin-top: 10px;
+        transition: all .3s linear
+    }
+
+    .check-btn {
+        font-size: 12px;
+    }
+
+    .card-text.font-weight-bold.text-uppercase {
+        font-size: 6px !important;
+    }
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    .tr-btn button{
+        width: 75px;
+    }
+
+    .card-text.font-weight-bold.text-uppercase {
+        font-size: 12px !important;
+    }
+
+    #bike-type .see-bike {
+        font-size: 10px !important;
+    }
+
+
+    .cty h4 {
+        font-size: 14px;
+    }
+
+    .dist-btn {
+        font-size: 9px !important;
+    }
+
+
+
+    .w-100.p-5.pdf-img {
+        padding: 0px !important
+    }
+
+    .pdf-name {
+        color: #222;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .pdf {
+        padding: 30px;
+    }
+
+
+    .valm {
+        font-size: 12px;
+    }
+
+    .gallery {
+        font-size: 14px;
+    }
+
+    .dte p {
+        font-size: 12px;
+    }
+
+    .get-btn {
+        height: 30px !important;
+        width: 100% !important;
+        font-size: 9px !important;
+    }
+
+    .rev-src {
+        width: 100% !important;
+    }
+
+
+    .locationshm-select h3 {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .locationshm-select select {
+        height: 30px;
+    }
+
+    .btn.btn-danger {
+        font-size: 12px;
+    }
+
+    .form-control.form-control-mobile {
+        width: 70%;
+    }
+
+    .pr-5.py-1 {
+        margin-right: 16px;
+    }
+
+    .mb-0.top-sd-cont {
+        font-size: 14px;
+    }
+
+    #menu ul li a {
+        font-size: 9px;
+    }
+
+    .add-ps img {
+        width: 80% !important;
+    }
+
+    .offer-btn {
+        padding-bottom: 15px;
+    }
+
+    .brand-name {
+        font-size: 16px !important;
+    }
+
+    .showroom-select select {
+        width: 23% !important
+    }
+
+    .showroom-select button {
+        width: 22% !important;
+
+    }
+
+    #menu .nav-link {
+        text-transform: uppercase;
+        font-size: 9px;
+        font-weight: 700;
+        color: #7a7a7a;
+    }
+}
+

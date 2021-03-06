@@ -1,0 +1,132 @@
+html, body {
+  height: 100%;
+  font-family: 'Lato';
+  color: #3a3a3a;
+  font-size: 17px;
+  line-height: 25px;
+  background-color: #ededed;
+}
+
+
+/* a.router-link-active, li.router-link-active a {
+    color:blue;
+  } */
+
+  /* for menu active */
+  a.router-link-exact-active, li.router-link-exact-active a {
+    border-bottom: 1px solid #f66;
+  }
+  
+
+  /* rang slider */
+
+  .slider {
+    display: inline-block;
+    padding: 0 10px;
+    height: 20px;
+    width: 100%;
+  }
+  
+  .range-slider.disabled {
+    opacity: 0.5;
+  }
+  
+  .range-slider-inner {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .range-slider-rail,
+  .range-slider-fill {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height:15px;
+    border-radius: 2px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  
+  .range-slider-rail {
+    width: 100%;
+    background-color: #e2e2e2;
+  }
+  
+  .range-slider-fill {
+    background-color: #21fb92;
+  }
+  
+  .range-slider-knob {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 40px;
+    width: 40px;
+    border: 2px solid papayawhip;
+    border-radius: 50%;
+    background-color:turquoise;
+    -webkit-box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  
+  .range-slider-hidden {
+    display: none;
+  }
+
+
+/* blog headline */
+.single-bike{
+ 
+    font-size: 35px;
+    font-weight: 700;
+  
+}
+  /* for blog post image size */
+  /* .fr-view img{
+max-width: 687.5px !important; 
+max-height: 429.69px !important; 
+  } */
+  .fr-view p {
+    display: block 1em !important;
+    margin-block-start: 1em !important; 
+    margin-block-end: 1em !important; 
+    margin-inline-start: 0px !important; 
+    margin-inline-end: 0px !important; 
+    font-size: 17px; 
+    font-size: 17px !important;
+    line-height: 25px !important;
+   
+}
+  /* for blog post image size */
+  
+
+  /* for showroom details */
+  .zahidaddcsforshowroomcoverimage{
+
+max-height: 528.69px !important; 
+  }
+  /* for showroom details end */
+
+
+  .starrating {
+    background: 0;
+    color: #6194C3;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    white-space: nowrap};
+    .alrating {
+      color: #ff5a00 !important;
+  }
