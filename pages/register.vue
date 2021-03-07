@@ -170,7 +170,7 @@
                             <div class="row mt-5">
                                 <div class="col-md-12 btm">
                                     Already have an account 
-                                    <router-link :to="`/login`">Sign In</router-link>
+                                    <NuxtLink :to="`/login`">Sign In</NuxtLink>
                                 </div>
 
                             </div>

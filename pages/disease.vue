@@ -14,9 +14,9 @@
     <b-card-text>
       {{card.description}}
     </b-card-text>
-<router-link :to="`/disease/${card.slug}`">Details
+<NuxtLink :to="`/disease/${card.slug}`">Details
 
-</router-link>
+</NuxtLink>
 
    </b-card>
 <infinite-loading @infinite="infiniteHandler"></infinite-loading>

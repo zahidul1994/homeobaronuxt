@@ -63,7 +63,7 @@
                                 </div>
 
                                 <div class="col-md-6 btm">
-                                    <router-link to="/forgatepassword" class="text-danger">Forgate Password?</router-link>
+                                    <NuxtLink to="/forgatepassword" class="text-danger">Forgate Password?</NuxtLink>
                                     
                                 </div>
                             </div>

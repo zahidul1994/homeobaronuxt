@@ -8,9 +8,9 @@
     <section id="top-area">
       <nav class="navbar navbar-expand-lg navbar-light bg-dark top-nav">
         <div class="container">
-          <router-link to="/" class="navbar-brand">
+          <NuxtLink to="/" class="navbar-brand">
             <img :src="require('@/assets/fontimage/homeobari.png')"  alt="homeobari"/>
-          </router-link>
+          </NuxtLink>
         <div class="gcse-search"></div>
           <ul class="tr-btn mb-0" v-if="authenticatedname">
             <li>
@@ -27,10 +27,10 @@
           </ul>
           <ul class="tr-btn mb-0" v-else>
             <li>
-              <router-link :to="`/login`" class="btn btn-outline-primary mr-2 t-btn t-btn-act">Login</router-link>
+              <NuxtLink :to="`/login`" class="btn btn-outline-primary mr-2 t-btn t-btn-act">Login</NuxtLink>
             </li>
             <li>
-              <router-link :to="`/register`" class="btn btn-outline-primary t-btn">Signup</router-link>
+              <NuxtLink :to="`/register`" class="btn btn-outline-primary t-btn">Signup</NuxtLink>
             </li>
           </ul>
         </div>
@@ -45,17 +45,17 @@
       <b-navbar-nav class="m-auto ">
         
         <li class="nav-item">
-                <router-link class="nav-link" :to="`/`">Home</router-link>
+                <NuxtLink class="nav-link" :to="`/`">Home</NuxtLink>
               </li> <li class="nav-item">
-                <router-link class="nav-link" :to="`/disease`">Disease</router-link>
+                <NuxtLink class="nav-link" :to="`/disease`">Disease</NuxtLink>
               </li> <li class="nav-item">
-                <router-link class="nav-link" :to="`/medicine`">Medicine</router-link>
+                <NuxtLink class="nav-link" :to="`/medicine`">Medicine</NuxtLink>
               </li> <li class="nav-item">
-                <router-link class="nav-link" :to="`/blogs`">Blog</router-link>
+                <NuxtLink class="nav-link" :to="`/blogs`">Blog</NuxtLink>
               </li> <li class="nav-item">
-                <router-link class="nav-link" :to="`/about`">About</router-link>
+                <NuxtLink class="nav-link" :to="`/about`">About</NuxtLink>
               </li> <li class="nav-item">
-                <router-link class="nav-link" :to="`/contact`">Contact</router-link>
+                <NuxtLink class="nav-link" :to="`/contact`">Contact</NuxtLink>
               </li>
       </b-navbar-nav>
 
@@ -65,36 +65,29 @@
     <img :src="require('@/assets/fontimage/biggapon.jpg')"  class="img-fluid" alt="homeobari"/>
 </div>
     </section>
-  <loading :active.sync="isLoading" 
-            :is-full-page="fullPage"
-            ></loading>
+
    
   </span>
 </template>
 
 <script>
 
-// Import component
-import Loading from 'vue-loading-overlay';
 export default {
     components: {
-            Loading,
-             
+            
         },
   name: "Header",
   data() {
     return {
-       fullPage: true,
-       isLoading: true,
+        // loading: true,
       authenticatedname: null,
       authenticatedimage: null,
-      Pagelist: [],
-      Allbrand: []
+     
     };
   },
   created() {
           this.$eventBus.$on("loadingHome", payload => {
-      this.isLoading = payload;
+      this.loading = payload;
     });
   },
   mounted() {

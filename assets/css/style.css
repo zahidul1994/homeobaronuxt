@@ -10,9 +10,7 @@ ol {
     list-style: none;
 }
 
-a {
-    text-decoration: none
-}
+
 html {
   scroll-behavior: smooth;
 }
@@ -98,11 +96,23 @@ body {
     color:blue;
   } */
 
-  /* for menu active */
-  a.router-link-exact-active, li.router-link-exact-active a {
-    border-bottom: 1px solid #f66;
+  a.nuxt-link-active {
+    font-weight: bold;
   }
-  
+  /* exact link will show the primary color for only the exact matching link */
+  a.nuxt-link-exact-active {
+    color: #f2173c;
+  }
+  a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #212927;
+}
+
 
 /*subscribe area*/
 #subscribe {

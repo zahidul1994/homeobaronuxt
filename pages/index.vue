@@ -15,11 +15,11 @@
                    img-top 
                    class="img-fluid"
                   >
-                 <router-link :to="`/homeo-info/${card.slug}`" 
+                 <NuxtLink :to="`/homeo-info/${card.slug}`" 
                         b-tooltip.hover title="Click For details">
                        <b-card-title> {{card.title}}</b-card-title>
                   
-                 </router-link>
+                 </NuxtLink>
 
                  </b-card>
 
@@ -42,10 +42,10 @@
                 <b-card v-for="card in RecentNews" :key="card.id" 
                   :img-src="`https://homeobari.com/den/storage/app/files/shares/blog/${card.photo}`"
                   :img-alt="card.photo" img-top tag="article" class="img-fluid">
-                 <router-link :to="`/info/${card.slug}`" 
+                 <NuxtLink :to="`/info/${card.slug}`" 
                         b-tooltip.hover title="Click For details">
                    <b-card-title> {{card.title}}</b-card-title>
-                 </router-link>
+                 </NuxtLink>
 
                  </b-card>
 
@@ -82,11 +82,11 @@
                     </b-col>
                     <b-col></b-col>
                     <b-col>
-                      <router-link :to="`/disease/${card.slug}`" class=" btn btn-sm btn-outline-primary"
+                      <NuxtLink :to="`/disease/${card.slug}`" class=" btn btn-sm btn-outline-primary"
                         b-tooltip.hover title="Click For details">
                         <b-icon icon="box-arrow-in-up-right"></b-icon>
 
-                      </router-link>
+                      </NuxtLink>
                     </b-col>
                   </b-row>
                 </b-card>
@@ -102,7 +102,7 @@
         <div class="row">
           <div class="col-md-7 col-sm-1 text-right">
 
-            <router-link :to="`/disease`" class=" btn btn-outline-danger">See All </router-link>
+            <NuxtLink :to="`/disease`" class=" btn btn-outline-danger">See All </NuxtLink>
           </div>
         </div>
         <div class="recent-view">
@@ -117,7 +117,7 @@
        
                       
                        <b-card-text  >{{med.minides}}  </b-card-text>
-                       <b-card-text> <router-link :to="`/medicine/${med.slug}`"  v-b-tooltip.hover title="Click For Buy"><b-icon icon="box-arrow-in-up-right"></b-icon> </router-link> </b-card-text>
+                       <b-card-text> <NuxtLink :to="`/medicine/${med.slug}`"  v-b-tooltip.hover title="Click For Buy"><b-icon icon="box-arrow-in-up-right"></b-icon> </NuxtLink> </b-card-text>
         
       </b-card>
    
@@ -130,7 +130,7 @@
   <div class="row">
           <div class="col-md-7 col-sm-1 text-right mt-1">
 
-            <router-link :to="`/medicine`" class=" btn btn-outline-primary">See All </router-link>
+            <NuxtLink :to="`/medicine`" class=" btn btn-outline-primary">See All </NuxtLink>
           </div>
         </div>
         <div class="recent-view">
@@ -158,11 +158,11 @@
                     </b-col>
                     <b-col></b-col>
                     <b-col>
-                      <router-link :to="`/disease/${card.slug}`" class=" btn btn-sm btn-outline-primary"
+                      <NuxtLink :to="`/disease/${card.slug}`" class=" btn btn-sm btn-outline-primary"
                         b-tooltip.hover title="Click For details">
                         <b-icon icon="arrow-right-circle"></b-icon>
 
-                      </router-link>
+                      </NuxtLink>
                     </b-col>
                   </b-row>
                 </b-card>
@@ -186,10 +186,10 @@
                 <b-card v-for="card in RecentBlog" :key="card.id" 
                   :img-src="`https://homeobari.com/den/storage/app/files/shares/blog/${card.photo}`"
                   :img-alt="card.photo" img-top tag="article" class="img-fluid">
-                 <router-link :to="`/info/${card.slug}`" 
+                 <NuxtLink :to="`/info/${card.slug}`" 
                          b-tooltip.hover title="Click For details">
                    <b-card-title> {{card.title}}</b-card-title>
-                 </router-link>
+                 </NuxtLink>
 
                  </b-card>
 
@@ -249,7 +249,7 @@
         data(){
        return {
            
-           
+       
           authenticatedname:null,
          authenticatedimage:null,
          slickOptions: {
@@ -369,7 +369,7 @@
           key: "og:keyword",
           name: "keyword",
           property: "og:keyword",
-          content: 'homeobari,sex,sexproblem,homebd,homeomedicine,homeobd,homeodr,homeosoftowar,onlinehomeo,homeo medicine'
+          content: 'homeobari, sex, sexproblem, homebd, homeomedicine, homeobd, homeodr, homeosoftowar, onlinehomeo, homeo medicine, Homeo Blog'
         },
         {
          hid: 'description',
@@ -397,10 +397,10 @@
     {property:'og:image', content: 'https://homeobari.com/den/storage/app/files/shares/backend/homeobari-logo.png'}
       ]
       }},
- 
 
-      created () {
-                 this.$axios.$get(`/home`)
+       async fetch () {
+   
+         await this.$axios.$get(`/home`)
         .then(response => {
          this.allDisease = response.disease;
           this.allMedicine = response.medicine;
@@ -408,10 +408,14 @@
           this.MedicineInformation = response.medicineinformation;
           this.RecentBlog = response.blogs;
           this.RecentNews = response.news;
-        //console.log(response.recentmedicine);
+  //  this.$nuxt.$loading.finish();
         })
         },
   mounted() {
+  // this.$nextTick(() => {
+  //     this.$nuxt.$loading.start()
+  //     setTimeout(() => this.$nuxt.$loading.finish(), 500)
+   // })
   
       var user= localStorage.getItem("user");
      
@@ -422,7 +426,7 @@
       
          
       }
-         this.$eventBus.$emit("loadingHome", false);
+       
     
       
   },

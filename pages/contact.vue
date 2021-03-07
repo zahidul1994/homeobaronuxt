@@ -138,7 +138,9 @@ export default {
       "name":"HOMEOBARI",
       "publisher":{"@id":"https://www.homeobari.com/#organization"},
         "inLanguage":"en-US"},
-
+{"@type":"ImageObject","@id":"/#primaryImage",
+"url":"https://homeobari.com/den/storage/app/files/shares/backend/homeobari-logo.png",
+"width":"345","height":"105"},
       {"@type":"WebPage",
       "@id":"https://www.homeobari.com/contact/#webpage",
       "url":"https://www.homeobari.com/contact/",
@@ -222,7 +224,7 @@ ContactForm(){
       this.$eventBus.$emit("loadingHome", true);
   this.form.post("/contact", this.form)
         .then(response => {
-         app.$toast.info("Your Message Sent Successfully. We Are Contact Very Soon", 'Thanks');
+       this.$toast.success("Your Message Sent Successfully. We Are Contact Very Soon");
          this.$router.push('/');
              this.$eventBus.$emit("loadingHome", false);
         })

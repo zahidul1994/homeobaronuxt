@@ -12,10 +12,10 @@
       <span v-html="Bloginfo.description"></span>
   
       <template #footer>
-           <router-link variant="primary" :to="`/blog/${Bloginfo.category.category}`" 
+           <NuxtLink variant="primary" :to="`/blog/${Bloginfo.category.category}`" 
                         v-b-tooltip.hover title="Click For details">
                {{Bloginfo.category.category}}
-                 </router-link>
+                 </NuxtLink>
         <small class="text-muted">Last updated {{Bloginfo.created_at | timeformat}}</small>
         
         <small v-if="Bloginfo.tag.length"> 
@@ -57,7 +57,7 @@
       
     </template>
     <h5 class="mt-0 mb-1">
-       <router-link :to="`/profile/${Bloginfo.admin['name']}`">Post By- {{Bloginfo.admin['name']}}</router-link></h5>
+       <NuxtLink :to="`/profile/${Bloginfo.admin['name']}`">Post By- {{Bloginfo.admin['name']}}</NuxtLink></h5>
     <p class="mb-0">
      {{Bloginfo.admin['aboutyou']}}
     </p>
@@ -68,13 +68,13 @@
               <b-card v-for="card in RelatedBlog" :key="card.id" :title="card.title"
                   :img-src="`https://homeobari.com/den/storage/app/files/shares/blog/${card.photo}`"
                   :img-alt="card.titile" img-top tag="article" class="mb-2 img-fluid m-1 col-md-2">
-                 <router-link :to="`/details/${card.slug}`" 
+                 <NuxtLink :to="`/details/${card.slug}`" 
                         b-tooltip.hover title="Click For details">
                        
                   <b-card-text>
                     {{card.metadescription}}
                   </b-card-text>
-                 </router-link>
+                 </NuxtLink>
 
                  </b-card>
           
@@ -172,16 +172,9 @@ title: 'Blog info'
     
       
       }},
-   created() {
-      
-
-  },
-    
-  mounted() {
-    
-     this.$eventBus.$emit("loadingHome", true);
-       
-     this.$axios.$get(`/info/${this.$route.params.id}`)
+    async fetch() {
+            
+     await this.$axios.$get(`/info/${this.$route.params.id}`)
           .then(response=>{
             this.Blogschemainfo=response.blogs.schemainfo;
               this.Bloginfo=response.blogs;
@@ -189,8 +182,14 @@ title: 'Blog info'
               //console.log(this.Bloginfo);
                 this.Views=response.totalview;
               this.RelatedBlog=response.relatedblog;
-                this.$eventBus.$emit("loadingHome", false);
+               // this.$eventBus.$emit("loadingHome", false);
           });
+
+  },
+    
+  mounted() {
+    
+     
 //this.getAsyncData();
     
   

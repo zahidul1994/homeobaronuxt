@@ -1,5 +1,5 @@
 {
-  "name": "Bikebd",
+  "name": "homeobari",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,6 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/toast": "^3.3.1",
-    "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.8.3",
     "jquery": "^3.5.1",
@@ -20,7 +19,6 @@
     "vform": "^1.0.1",
     "vue-gtag": "^1.11.0",
     "vue-infinite-loading": "^2.4.5",
-    "vue-loading-overlay": "^3.4.2",
     "vue-slick": "^1.1.16",
     "vue-social-sharing": "^3.0.5"
   },

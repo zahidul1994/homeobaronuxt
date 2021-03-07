@@ -33,7 +33,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~plugins/global.js', //for gobal varible
+   '~plugins/global.js',//for gobal varible
+   {  src:'~plugins/infinitityscroll.js',  mode: 'client' },//for gobal varible
     '~plugins/filter.js'  //for gobal filter  
   ],
 
@@ -50,23 +51,20 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt','@nuxtjs/toast','vue-social-sharing/nuxt',
      ['@nuxtjs/axios', {
-      baseURL: 'https://account.homeobari.com/api'
+      baseURL: 'https://homeobari.com/den/api'
     }],
     
   ],
-
-  toast: {
-    position: 'top-center',
-    register: [ // Register custom toasts
-      {
-        name: 'my-error',
-        message: 'Oops...Something went wrong',
-        options: {
-          type: 'error'
-        }
-      }
-    ]
-},
+  router: {
+    linkActiveClass: 'danger'
+  },
+  loading: {
+    color: 'primary',
+    height: '10px',
+    continuous: true,
+    duration: 3000
+  },
+ 
   bootstrapVue: {
     // Install the `IconsPlugin` plugin (in addition to `BootstrapVue` plugin)
     icons: true
@@ -77,6 +75,6 @@ export default {
   // },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile:['vue-infinite-loading','vue-slick','vform','vue-gtag']
+    transpile:['vue-slick','vform','vue-gtag','vue-infinite-loading']
   }
 }

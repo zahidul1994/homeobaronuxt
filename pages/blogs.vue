@@ -8,13 +8,13 @@
    img-top
       class="img-fluid col-md-3"
   >
-  <router-link :to="`/info/${card.slug}`">
+  <NuxtLink :to="`/info/${card.slug}`">
   <b-card-title> {{card.title}}</b-card-title>
     <b-card-text>
 {{card.metadescription}}
     </b-card-text>
 
-</router-link>
+</NuxtLink>
 
    </b-card>
 <infinite-loading @infinite="infiniteHandler"></infinite-loading>
@@ -26,7 +26,7 @@
 <script>
 export default {
   
-  name: "Blog",
+  name: "blogs",
   data() {
     return {
      
@@ -44,7 +44,7 @@ export default {
     "@id": "https://www.homeobari.com/blogs"
   },
   "headline": "homeobari-blogs",
-  "image": "https://homeobari.com/den/storage/app/files/1/bikebd.png",  
+  "image": "https://homeobari.com/den/storage/app/files/shares/backend/homeobari-logo.png",  
   "author": {
     "@type": "person",
     "name": "Zahidul Islam"
@@ -72,7 +72,7 @@ export default {
       ]}},
     metaInfo() {
     return {
-       title: 'All Blogs Post হোমিওপ্যাথি', 
+       title: 'All Blogs Post হোমিওপ্যাথি  In Homeobari Blogs', 
       meta: [
         
         { key: "indexing", name: "robots", content:'index, follow' },
@@ -85,7 +85,7 @@ export default {
           key: "og:keyword",
           name: "keyword",
           property: "og:keyword",
-          content: 'homeobariblog,sexmedicine,sexproblem,homebd,homeomedicine,homeobd,homeodr,homeosoftowar,onlinehomeo,homeo medicineinfo blog'
+          content: 'homeobariblog, sexmedicine, sexproblem, homebd, homeomedicine, homeobd,homeodr, homeosoftowar,onlinehomeo,homeo medicineinfo blog'
         },
         {
           key: "og:description",
@@ -114,27 +114,27 @@ export default {
   },
 
 
-  mounted() {
+  created() {
     this.infiniteHandler();
   },
 
   methods: {
  infiniteHandler($state) {
- 
-       this.$eventBus.$emit("loadingHome", true);
-       
-                this.$axios.$get('/blogs?page='+this.page)
+      
+      
+     this.$axios.$get('/blogs?page='+this.page)
                    
       .then(({ data }) => {
-            this.$eventBus.$emit("loadingHome", false);     
-        if (data.data.length) {
+           
+        if (data.length) {
           this.page += 1;
-          this.allBlog.push(...data.data);
-          $state.loaded();
+          this.allBlog.push(...data);
+         // $state.loaded();
         } else {
           $state.complete();
         }
       });
+    
                 
             },
 

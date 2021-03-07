@@ -7,12 +7,12 @@
                 <b-card :title="MedicineInfo.title"   >
              
       <b-card-text>
-       <h6> রোগের  নাম : <router-link :to="`/disease/${MedicineInfo.disease['diseasename']}`">{{MedicineInfo.disease['diseasename']}}</router-link> </h6>
+       <h6> রোগের  নাম : <NuxtLink :to="`/disease/${MedicineInfo.disease['diseasename']}`">{{MedicineInfo.disease['diseasename']}}</NuxtLink> </h6>
               <h6> রোগের  কারণ : {{MedicineInfo.disease['description']}}</h6>  
       </b-card-text>
       
       <span v-html="MedicineInfo.description"></span>
-     <span v-for="dis in MedicineInfo.disease.disemedicine.medicine" :key="dis.id"><router-link :to="`/medicine/${dis.medicinename}`">{{dis.medicinename}} </router-link></span>
+     <span v-for="dis in MedicineInfo.disease.disemedicine.medicine" :key="dis.id"><NuxtLink :to="`/medicine/${dis.medicinename}`">{{dis.medicinename}} </NuxtLink></span>
       <template #footer>
         <small class="text-muted">Last updated {{MedicineInfo.created_at | timeformat}}</small>
         

@@ -1,11 +1,8 @@
 import Vue from 'vue'
 import Header from '../layouts/Header.vue'
 import Footer from '../layouts/Footer.vue'
-import InfiniteLoading from 'vue-infinite-loading';
 import 'slick-carousel/slick/slick.css'
-import 'vue-loading-overlay/dist/vue-loading.css';
 import Form from 'vform';
-
 export default ({ app }, inject) => {
   Form.prototype.submit = function submit(method, url, config = {}) {
     this.startProcessing();
@@ -46,7 +43,7 @@ Vue.use(VueGtag, {
 });
 
   import Slick from "vue-slick";
- Vue.use(InfiniteLoading,  Slick, VueGtag);
+ Vue.use(Slick, VueGtag);
 //for sent all page token
 Vue.prototype.$eventBus = new Vue(); // Global event bus
 const components = { Header, Footer }
