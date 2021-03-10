@@ -215,22 +215,24 @@ export default {
 
   },
   mounted() {
-        this.$eventBus.$emit("loadingHome", false);
+        this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+    });
   },
 
   methods: {
 ContactForm(){
-  //alert(this.form); return;
-      this.$eventBus.$emit("loadingHome", true);
+ 
   this.form.post("/contact", this.form)
         .then(response => {
        this.$toast.success("Your Message Sent Successfully. We Are Contact Very Soon");
          this.$router.push('/');
-             this.$eventBus.$emit("loadingHome", false);
+           
         })
         .catch(response => {
          [this.$toast.warning("Sorry Try Agin")];
-             this.$eventBus.$emit("loadingHome", false);
+         
         });
 }
 

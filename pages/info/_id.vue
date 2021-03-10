@@ -28,18 +28,62 @@
   
             <div>
   <b-list-group horizontal="md">
-    <b-list-group-item><div class="fb-share-button" :data-href="`https://www.homeobari.com/info/${this.$route.params.id}`"
-                  data-layout="button_count" ></div></b-list-group-item>
-    <b-list-group-item><a
-                  :href="`https://twitter.com/share?text=${this.$route.params.id}&url=${`https://www.homeobari.com/info/${this.$route.params.id}`}`"
-                >Twitter</a></b-list-group-item>
-      <b-list-group-item><a
-                  :href="`https://www.linkedin.com/shareArticle??text=${this.$route.params.id}&url=${`https://www.homeobari.com/info/${this.$route.params.id}`}`"
-                  onclick="window.open(this.href, 'instagram-share', 'width=550,height=235');return false"
-                >Linkdin
-                 
-                </a></b-list-group-item>  
-                 <b-list-group-item><b-icon icon="eye-fill"></b-icon> {{Views}}
+    <b-list-group-item>
+      <ShareNetwork
+    network="facebook"
+    :url="`https://homeobari.com/info/${this.$route.params.id}`"
+    :title="`${title}`"
+    :description="`${Bloginfo.metadescription}`"
+    :quote="`Post By - ${Bloginfo.admin['name']}`"
+    hashtags="homeobari"
+  >
+    <b-icon-facebook scale="2" variant="primary" b-tooltip.hover title="Share On Facebook"></b-icon-facebook>
+    </ShareNetwork>
+    </b-list-group-item>
+    <b-list-group-item>
+                    <ShareNetwork
+    network="twitter"
+    :url="`https://homeobari.com/info/${this.$route.params.id}`"
+    :title="`${title}`"
+    :description="`${Bloginfo.metadescription}`"
+    :quote="`${Bloginfo.admin['name']}`"
+    hashtags="homeobari"
+  >
+    <b-icon-twitter scale="2" variant="primary" b-tooltip.hover title="Share On Twitter"></b-icon-twitter>
+</ShareNetwork>
+    </b-list-group-item>
+      <b-list-group-item>
+        <ShareNetwork
+    network="instapaper"
+    :url="`https://homeobari.com/info/${this.$route.params.id}`"
+    :title="`${title}`"
+    :description="`${Bloginfo.metadescription}`"
+    :quote="`${Bloginfo.admin['name']}`"
+    hashtags="homeobari"
+  >
+    <b-icon-instagram scale="2" variant="primary" b-tooltip.hover title="Share On Instagram">
+
+    </b-icon-instagram>
+</ShareNetwork>
+                
+ </b-list-group-item>  
+ <b-list-group-item>  
+ 
+                 <ShareNetwork
+    network="linkedin"
+    :url="`https://homeobari.com/info/${this.$route.params.id}`"
+    :title="`${title}`"
+    :description="`${Bloginfo.metadescription}`"
+    :quote="`${Bloginfo.admin['name']}`"
+    hashtags="homeobari"
+  >
+    <b-icon-linkedin scale="2" variant="primary" b-tooltip.hover title="Share On Linkedin"></b-icon-linkedin>
+</ShareNetwork>
+      </b-list-group-item>
+
+      <b-list-group-item>
+                   
+                   <b-icon icon="eye-fill"></b-icon> {{Views}}
                  
                 </b-list-group-item>
   </b-list-group>
@@ -48,43 +92,42 @@
                 
                      
     </b-card>
-    
+   
+          
            </b-card-group> 
 
   <b-media right-align vertical-align="center">
     <template #aside>
-      <b-img thumbnail  :src="`https://homeobari.com/den/storage/app/files/shares/profileimage/thumbs/${Bloginfo.admin['image']}`" width="80" :alt="Bloginfo.admin['name']"></b-img>
+      <b-img thumbnail  :src="`https://homeobari.com/den/storage/app/files/shares/profileimage/${Bloginfo.admin['image']}`" width="80" :alt="Bloginfo.admin['name']"></b-img>
       
     </template>
     <h5 class="mt-0 mb-1">
-       <NuxtLink :to="`/profile/${Bloginfo.admin['name']}`">Post By- {{Bloginfo.admin['name']}}</NuxtLink></h5>
+       <NuxtLink :to="`/profile/${Bloginfo.admin['username']}`">Post By- {{Bloginfo.admin['name']}}</NuxtLink></h5>
     <p class="mb-0">
      {{Bloginfo.admin['aboutyou']}}
     </p>
   </b-media>
 
-           
-           <h3 class="m-4">Related Blog</h3> <br>
-              <b-card v-for="card in RelatedBlog" :key="card.id" :title="card.title"
+
+    <b-card v-for="card in RelatedBlog" :key="card.id" :title="card.title"
                   :img-src="`https://homeobari.com/den/storage/app/files/shares/blog/${card.photo}`"
-                  :img-alt="card.titile" img-top tag="article" class="mb-2 img-fluid m-1 col-md-2">
-                 <NuxtLink :to="`/details/${card.slug}`" 
+                  :img-alt="card.titile" img-top tag="article" class="my-1 img-fluid col-md-2">
+                 <NuxtLink :to="`/info/${card.slug}`" 
                         b-tooltip.hover title="Click For details">
                        
                   <b-card-text>
-                    {{card.metadescription}}
+                    {{card.metadescription |shortlength(50, ' ..')}}
                   </b-card-text>
                  </NuxtLink>
 
                  </b-card>
-          
+                 
+              
               <div class="fb-comments col-md-12"
               :data-href="`https://homeobari.com/info/${Bloginfo.slug}`"
               data-numposts="5"
               
             ></div>
-
-
 </b-row>
 </div>
 
@@ -188,18 +231,22 @@ title: 'Blog info'
   },
     
   mounted() {
-    
+     this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+    });
+  
      
 //this.getAsyncData();
     
   
-//  (function(d, s, id) {
-//       var js, fjs = d.getElementsByTagName(s)[0];
-//    if (d.getElementById(id)) return;
-//     js = d.createElement(s); js.id = id;
-//     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-//     fjs.parentNode.insertBefore(js, fjs);
-//   }(document, 'script', 'facebook-jssdk'))
+ (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'))
       
   },
 

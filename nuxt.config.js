@@ -40,7 +40,7 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-
+  target: 'server',
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     
@@ -55,25 +55,19 @@ export default {
     }],
     
   ],
-  router: {
-    linkActiveClass: 'danger'
-  },
+
   loading: {
-    color: 'primary',
-    height: '10px',
-    continuous: true,
-    duration: 3000
+    color: 'red',
+    height: '5px'
   },
+
  
   bootstrapVue: {
     // Install the `IconsPlugin` plugin (in addition to `BootstrapVue` plugin)
     icons: true
   },
-  // axios: {
-  //   // extra config e.g
-  //    BaseURL: 'https://account.homeobari.com/api'
-  // },
-  // Build Configuration: https://go.nuxtjs.dev/config-build
+
+
   build: {
     transpile:['vue-slick','vform','vue-gtag','vue-infinite-loading']
   }

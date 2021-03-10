@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" v-show="All">
 
        <!--recent area-->
         <div class="recent-view">
@@ -249,7 +249,7 @@
         data(){
        return {
            
-       
+       All:false,
           authenticatedname:null,
          authenticatedimage:null,
          slickOptions: {
@@ -408,14 +408,15 @@
           this.MedicineInformation = response.medicineinformation;
           this.RecentBlog = response.blogs;
           this.RecentNews = response.news;
+        this.All=true;
   //  this.$nuxt.$loading.finish();
         })
         },
   mounted() {
-  // this.$nextTick(() => {
-  //     this.$nuxt.$loading.start()
-  //     setTimeout(() => this.$nuxt.$loading.finish(), 500)
-   // })
+ this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+    });
   
       var user= localStorage.getItem("user");
      

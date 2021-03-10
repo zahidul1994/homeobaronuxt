@@ -86,11 +86,11 @@ export default {
     };
   },
   created() {
-          this.$eventBus.$on("loadingHome", payload => {
-      this.loading = payload;
-    });
+         
   },
   mounted() {
+  
+    
     var user = localStorage.getItem("user");
 
     if (user) {
@@ -107,7 +107,7 @@ export default {
          window.scrollTo(0, 0);
       },
     logOutNow() {
-      axios.post("/logout")
+      this.$axios.$post("/logout")
       .then(response => {
       localStorage.removeItem('user');
       localStorage.removeItem('token');

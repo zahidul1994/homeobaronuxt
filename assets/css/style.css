@@ -100,19 +100,17 @@ body {
     font-weight: bold;
   }
   /* exact link will show the primary color for only the exact matching link */
-  a.nuxt-link-exact-active {
-    color: #f2173c;
-  }
+ 
   a,
 a:visited {
   text-decoration: none;
   color: inherit;
 }
 
-a:hover {
-  color: #212927;
-}
-
+.nuxt-link-active {
+    color: red;
+  }
+  
 
 /*subscribe area*/
 #subscribe {
