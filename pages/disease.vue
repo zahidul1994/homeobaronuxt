@@ -41,34 +41,38 @@ export default {
     };
   },
   created() {
-    // document.title = "Disease";
+    this.infiniteHandler();
 
   },
   mounted() {
-    this.infiniteHandler();
+       this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+    });
   },
 
   methods: {
  infiniteHandler($state) {
-       this.$eventBus.$emit("loadingHome", true);
-                this.$axios.$get('/disease?page='+this.page)
+        
+     this.$axios.$get('/disease?page='+this.page)
                    
-                      .then(({ data }) => {
-                     this.$eventBus.$emit("loadingHome", false);     
-        if (data.data.length) {
+      .then(({ data }) => {
+           
+        if (data.length) {
           this.page += 1;
-          this.allDisease.push(...data.data);
-          $state.loaded();
+          this.allDisease.push(...data);
+         // $state.loaded();
         } else {
           $state.complete();
         }
       });
+    
                 
             },
  ShowDiseaseinfo(id){
 this.$axios.$get(`/medisioneinfodetails/${id}`)
           .then(response=>{
-              this.allMedisineinfo=response.data.diseaseinfo;
+              this.allMedisineinfo=response.diseaseinfo;
               this.dialog=true;
           })
   }

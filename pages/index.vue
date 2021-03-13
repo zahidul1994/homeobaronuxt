@@ -3,7 +3,7 @@
 
        <!--recent area-->
         <div class="recent-view">
-          <h3 class="mb-4">Recently Homeoinfo </h3>
+          <h3 class="mb-4">Recently Update </h3>
 
           <div class="row">
             <div class="col-md-12">
@@ -238,7 +238,7 @@
 // Import stylesheet
 
     export default {
-      name: 'App',
+      name: 'index',
     components: {
            
              Slick: () => import('vue-slick')
@@ -250,9 +250,7 @@
        return {
            
        All:false,
-          authenticatedname:null,
-         authenticatedimage:null,
-         slickOptions: {
+             slickOptions: {
           slidesToShow: 4,
           slidesToScroll: 1,
           dots: false,
@@ -408,37 +406,27 @@
           this.MedicineInformation = response.medicineinformation;
           this.RecentBlog = response.blogs;
           this.RecentNews = response.news;
-        this.All=true;
+       
   //  this.$nuxt.$loading.finish();
         })
         },
   mounted() {
  this.$nextTick(() => {
       this.$nuxt.$loading.start()
-      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+      setTimeout(() => this.$nuxt.$loading.finish(), 500);
+       this.All=true;
     });
-  
-      var user= localStorage.getItem("user");
-     
-      if(user){
-       
-           this.authenticatedimage=JSON.parse(localStorage.getItem("user")).userimage;
-        this.authenticatedname= JSON.parse(localStorage.getItem("user")).username;
-      
-         
-      }
-       
-    
+
       
   },
   methods: {
     
       ShowDisemedicineinfo(id) {
-        $axios.$get(`/diseasemedicineinformation/${id}`)
-        //   .then(response => {
-        //     this.Diseagemedicineinfo = JSON.parse(response.data.diseasemedicine.medicine);
+        this.$axios.$get(`/diseasemedicineinformation/${id}`)
+          .then(response => {
+            this.Diseagemedicineinfo = JSON.parse(response.diseasemedicine.medicine);
 
-        //   })
+          })
       }
       },
 
