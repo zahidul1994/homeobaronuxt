@@ -1,0 +1,3 @@
+    - export DEPLOYPATH=/home/homeobari/public_html/
+    - /bin/cp -R * $DEPLOYPATH
+    
