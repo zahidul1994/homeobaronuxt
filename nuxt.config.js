@@ -3,18 +3,18 @@ export default {
   head: {
     title: 'Homeobari',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'bn'
     },
     meta: [
       { charset: 'utf-8' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { key: "indexing", name: "robots", content:'index, follow' },
-      { key: "og:type", property: "og:type", content:'Website' },
+      {  name: "robots", content:'index, follow' },
+      { property: "og:type", content:'Website' },
       { property:"og:site_name",   content:"Homeobari" },
-      { property:"fb:app_id",  content:"437565014195029" },
-      { property:"og:author",  href:"https://homeobari.com/@zahidul" }
+      { property:"fb:app_id",  content:"437565014195029" }
      
+           
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

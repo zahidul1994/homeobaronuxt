@@ -3,17 +3,17 @@
 
        <!--recent area-->
         <div class="recent-view">
-          <h3 class="mb-4">Recently Update </h3>
+          <h3 class="mb-4">Recently Homeo Info </h3>
 
-          <div class="row">
-            <div class="col-md-12">
+
+            <b-card-group deck>
 
               <slick :options="slickOptions" v-if="RecentMedicineInformation.length">
                 <b-card v-for="card in RecentMedicineInformation" :key="card.id"   
                   :img-src="`https://homeobari.com/den/storage/app/files/shares/medicineinformation/${card.photo}`"
-                  :img-alt="card.photo" 
+                  :img-alt="card.title" 
                    img-top 
-                   class="img-fluid"
+                   class="img-fluid shadow rounded p-3"
                   >
                  <NuxtLink :to="`/homeo-info/${card.slug}`" 
                         b-tooltip.hover title="Click For details">
@@ -25,11 +25,8 @@
 
 
               </slick>
-            </div>
+            </b-card-group>
 
-
-
-          </div>
         </div>
         <!--recent news-->
         <div class="recent-view">
@@ -41,7 +38,7 @@
               <slick :options="slickOptions" v-if="RecentNews.length">
                 <b-card v-for="card in RecentNews" :key="card.id" 
                   :img-src="`https://homeobari.com/den/storage/app/files/shares/blog/${card.photo}`"
-                  :img-alt="card.photo" img-top tag="article" class="img-fluid">
+                  :img-alt="card.title" img-top tag="article" class="img-fluid shadow rounded p-3">
                  <NuxtLink :to="`/info/${card.slug}`" 
                         b-tooltip.hover title="Click For details">
                    <b-card-title> {{card.title}}</b-card-title>
@@ -77,12 +74,12 @@
                     <b-col>
                       <b-button size="sm" variant="outline-info" v-b-tooltip.hover title="Click For Medicine Name"
                         b-modal.MedicineModal @click="ShowDisemedicineinfo(card.id)">
-                        <b-icon icon="box-arrow-in-up-right"></b-icon>
+                        <b-icon icon="file-medical"></b-icon>
                       </b-button>
                     </b-col>
                     <b-col></b-col>
                     <b-col>
-                      <NuxtLink :to="`/disease/${card.slug}`" class=" btn btn-sm btn-outline-primary"
+                      <NuxtLink :to="`/disease-info/${card.slug}`" class=" btn btn-sm btn-outline-primary"
                         b-tooltip.hover title="Click For details">
                         <b-icon icon="box-arrow-in-up-right"></b-icon>
 
@@ -113,10 +110,10 @@
 
               <slick :options="slickOptions" v-if="allMedicine.length">
            
-      <b-card  text-variant="white" :header="med.medicinename"   :class="`bg-${med.color}`" class="text-center" v-for="med in allMedicine" :key="med.id"  >
+      <b-card  text-variant="white" :header="med.medicinename"   :class="`bg-${med.color}`" class="text-center m-2 " v-for="med in allMedicine" :key="med.id"  >
        
                       
-                       <b-card-text  >{{med.minides}}  </b-card-text>
+                       <b-card-text  >{{med.minides | shortlength(30, ' ..')}}  </b-card-text>
                        <b-card-text> <NuxtLink :to="`/medicine/${med.slug}`"  v-b-tooltip.hover title="Click For Buy"><b-icon icon="box-arrow-in-up-right"></b-icon> </NuxtLink> </b-card-text>
         
       </b-card>
@@ -133,48 +130,7 @@
             <NuxtLink :to="`/medicine`" class=" btn btn-outline-primary">See All </NuxtLink>
           </div>
         </div>
-        <div class="recent-view">
-          <h3 class="mb-4">Latest Medicine </h3>
-
-          <div class="row">
-            <div class="col-md-12">
-
-              <slick :options="slickOptions" v-if="allDisease.length">
-                <b-card v-for="card in allDisease" :key="card.id" :title="card.diseasename"
-                  :img-src="`https://homeobari.com/den/storage/app/files/shares/diseases/${card.diseaseimage}`"
-                  :img-alt="card.diseasename" img-top tag="article" class="img-fluid">
-                  <b-card-text>
-                    {{card.description}}
-                  </b-card-text>
-
-
-                  <b-row>
-                    <b-col>
-                      <b-button size="sm" variant="outline-info" b-tooltip.hover title="Click For Medicine Name"
-                        v-b-modal.MedicineModal @click="ShowDisemedicineinfo(card.id)">
-                       
-                         <b-icon icon="view-list"></b-icon>
-                      </b-button>
-                    </b-col>
-                    <b-col></b-col>
-                    <b-col>
-                      <NuxtLink :to="`/disease/${card.slug}`" class=" btn btn-sm btn-outline-primary"
-                        b-tooltip.hover title="Click For details">
-                        <b-icon icon="arrow-right-circle"></b-icon>
-
-                      </NuxtLink>
-                    </b-col>
-                  </b-row>
-                </b-card>
-
-
-              </slick>
-            </div>
-
-
-          </div>
-        </div>
-
+    
 <!--recent blog-->
         <div class="recent-view">
           <h3 class="mb-4">Recently Blog</h3>
@@ -185,7 +141,7 @@
               <slick ref="slick" :options="slickOptions" v-if="RecentBlog.length">
                 <b-card v-for="card in RecentBlog" :key="card.id" 
                   :img-src="`https://homeobari.com/den/storage/app/files/shares/blog/${card.photo}`"
-                  :img-alt="card.photo" img-top tag="article" class="img-fluid">
+                  :img-alt="card.title" img-top tag="article" class="img-fluid shadow rounded p-3">
                  <NuxtLink :to="`/info/${card.slug}`" 
                          b-tooltip.hover title="Click For details">
                    <b-card-title> {{card.title}}</b-card-title>
@@ -255,8 +211,8 @@
           slidesToScroll: 1,
           dots: false,
           arrows: true,
-          prevArrow:'<span class="left-round"></span>',
-          nextArrow: '<span class="right-round"></span>',
+          prevArrow:'',
+          nextArrow:'' ,
           autoplay: true,
           autoplaySpeed: 2000,
           responsive: [{

@@ -6,7 +6,7 @@
           :key="card.id"
      :img-src="`https://homeobari.com/den/storage/app/files/shares/blog/${card.photo}`"
    img-top
-      class="img-fluid col-md-3"
+      class="my-2 img-fluid col-md-3  shadow rounded p-3"
   >
   <NuxtLink :to="`/info/${card.slug}`">
   <b-card-title> {{card.title}}</b-card-title>

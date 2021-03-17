@@ -45,17 +45,17 @@
       <b-navbar-nav class="m-auto ">
         
         <li class="nav-item">
-                <NuxtLink class="nav-link" :to="`/`">Home</NuxtLink>
+                <NuxtLink class="nuxt-link" :to="`/`">Home</NuxtLink>
               </li> <li class="nav-item">
-                <NuxtLink class="nav-link" :to="`/disease`">Disease</NuxtLink>
+                <NuxtLink class="nuxt-link" :to="`/disease`">Disease</NuxtLink>
               </li> <li class="nav-item">
-                <NuxtLink class="nav-link" :to="`/medicine`">Medicine</NuxtLink>
+                <NuxtLink class="nuxt-link" :to="`/medicine`">Medicine</NuxtLink>
               </li> <li class="nav-item">
-                <NuxtLink class="nav-link" :to="`/blogs`">Blog</NuxtLink>
+                <NuxtLink class="nuxt-link" :to="`/blogs`">Blog</NuxtLink>
               </li> <li class="nav-item">
-                <NuxtLink class="nav-link" :to="`/about`">About</NuxtLink>
+                <NuxtLink class="nuxt-link" :to="`/about`">About</NuxtLink>
               </li> <li class="nav-item">
-                <NuxtLink class="nav-link" :to="`/contact`">Contact</NuxtLink>
+                <NuxtLink class="nuxt-link" :to="`/contact`">Contact</NuxtLink>
               </li>
       </b-navbar-nav>
 

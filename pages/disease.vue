@@ -9,14 +9,16 @@
     :img-alt="card.diseasename"
     img-top
     tag="article"
-   class="my-2 img-fluid col-md-3"
+   class="my-2 img-fluid col-md-3  shadow rounded p-3"
   >
     <b-card-text>
       {{card.description}}
     </b-card-text>
-<NuxtLink :to="`/disease/${card.slug}`">Details
+<NuxtLink :to="`/disease-info/${card.slug}`" class=" btn btn-sm btn-outline-primary"
+                        b-tooltip.hover title="Click For details">
+                        <b-icon icon="box-arrow-in-up-right"></b-icon>
 
-</NuxtLink>
+                      </NuxtLink>
 
    </b-card>
 <infinite-loading @infinite="infiniteHandler"></infinite-loading>
@@ -35,34 +37,40 @@ export default {
      
        allMedisineinfo:[],
            allDisease:[],
-            //  medicineinformation:[],
-         
+                  
            page: 1,
     };
   },
   created() {
-    // document.title = "Disease";
+      this.infiniteHandler();
 
   },
   mounted() {
-    this.infiniteHandler();
+ 
+	 this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+    });
   },
 
   methods: {
+    
  infiniteHandler($state) {
-       this.$eventBus.$emit("loadingHome", true);
+       
                 this.$axios.$get('/disease?page='+this.page)
                    
                       .then(({ data }) => {
-                     this.$eventBus.$emit("loadingHome", false);     
-        if (data.data.length) {
+                         
+        if (data.length) {
           this.page += 1;
-          this.allDisease.push(...data.data);
-          $state.loaded();
+          this.allDisease.push(...data);
+         // $state.loaded();
         } else {
           $state.complete();
         }
       });
+	  
+
                 
             },
  ShowDiseaseinfo(id){

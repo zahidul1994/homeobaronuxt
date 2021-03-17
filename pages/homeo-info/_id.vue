@@ -185,7 +185,7 @@ name: "Medicineinformation",
  
 
 async fetch() {
-  this.$axios.$get(`/homeo-info/${this.$route.params.id}`)
+  await this.$axios.$get(`/homeo-info/${this.$route.params.id}`)
           .then(response=>{
               this.MedicineInfo=response.medicineinformation;
                 this.Medicine=JSON.parse(response.medicineinformation.disease.disemedicine.medicine);
